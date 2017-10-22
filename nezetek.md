@@ -27,7 +27,7 @@ UISwipeGestureRecognizer //swipe
 UIPinchGestureRecognizer //pinch
 ```
 ### Hogy történik egy `ViewController` `View`-jának betöltése (kód vagy IB), és az egyes állapotokról milyen értesítéseket kap a `ViewController`!
-![view betöltése](src/load_view.png)
+![](img/load_view.png)
 
 Értesítések:
 ```swift
@@ -47,7 +47,7 @@ Megnézi hogy hány pont egy pixel, és az annak megfelelőt tölti be (pl image
 ### Írj egy egyszerű UIView leszármazottat, ami kirajzol egy geometriai formát (kör, ellipszis, háromszög, valamilyen ív, stb.). Használj grafikus kontextust vagy UIBezierPath-t!
 ```swift
 class CircleView : UIView {
-    var radius: CGFloat```swift
+    var radius: CGFloat
     
     init(radius length: CGFloat) {
         radius = length
