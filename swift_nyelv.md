@@ -24,6 +24,7 @@ constPoint.x = 20 //ERROR
 
 ### Mik azok a computed property-k?
 Olyan property egy típuson belül, ami más értékekből van "összemixelve"
+
 Példa:
 ```
 var title: String //init() adja ez értékét
@@ -37,15 +38,22 @@ var titleWithAuthor: String {
 
 ### Milyen láthatósági osztályok léteznek Swiftben? Melyik a legnyitottabb, melyik a legkorlátozottabb?
 `open`: framework-ön kívülről látható, kibővíthető, subclass-olható
+
 `public`: kívülről látható, hozzáférhető
+
 `internal`: framework-ön belül látható, egyébként nem
+
 `fileprivate`: .swift file-on belül látható
+
 `private`: csak a kódblokk-on belül látható vagy extenstio-ben
 
 ### Swift switch
 Kimerítőnek kell lennie (minden eshetőségre történnie kell valaminek, azaz legtöbb esetben default case is kell)
-NIncs fallthrough (nem kell a break a case végére, `fallthrough` és `break` utasítással el lehet érni hogy ez is működjön)
+
+Nincs fallthrough (nem kell a break a case végére, `fallthrough` és `break` utasítással el lehet érni hogy ez is működjön)
+
 További feltétlelek vizsgálhatók `where`-rel
+
 Példa:
 ```
 let yetAnotherPoint = (1, -1)
@@ -78,5 +86,3 @@ var otherName = optionalString! //ha optionalString nil, a program crash-el
 
 ### Mi a kétfázisú inicializáció, és hogyan működik?
 Az osztály az `init()` függvényben először inicializálja a saját adattagjait, és csak utána az ősosztályét
-
-
