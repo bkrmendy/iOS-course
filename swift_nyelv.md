@@ -1,9 +1,4 @@
-#  iOS ZH
-
-## Bevezetés
-...
-
-## Swift nyelv
+# Swift nyelv
 ### Mit jelent az, hogy a Swift erősen és statikusan típusos?
 Minden változónak meg kell jelölni a típusát deklarációkor (kivétel max az inferring) és a változók típusa nem változhat        a runtime alatt
 
