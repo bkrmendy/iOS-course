@@ -6,7 +6,7 @@ Minden változónak meg kell jelölni a típusát deklarációkor (kivétel max 
 A compiler megpróbálja kitalálni a változó típusát ha nem lett megadva (pl `var str = “Hello”`)
 
 ### Fő működésbeli különbség konstans Struct és Class között?
-```
+```swift
 //Class
 let label = UILabel()
 label = UILabel(frame: someFrame) //ERROR
@@ -21,7 +21,7 @@ constPoint.x = 20 //ERROR
 Olyan property egy típuson belül, ami más értékekből van "összemixelve"
 
 Példa:
-```
+```swift
 var title: String //init() adja ez értékét
 var author: String //init() adja ez értékét
 var titleWithAuthor: String {
@@ -50,7 +50,7 @@ Nincs fallthrough (nem kell a break a case végére, `fallthrough` és `break` u
 További feltétlelek vizsgálhatók `where`-rel
 
 Példa:
-```
+```swift
 let yetAnotherPoint = (1, -1)
 switch yetAnotherPoint {
 case let (x, y) where x == y:
@@ -63,7 +63,7 @@ case let (x, y):
 ```
 
 ### Milyen módszereket ismersz opcionális típus kicsomagolására és használatára?
-```
+```swift
 let optionalString = String?
 // code here```
 
