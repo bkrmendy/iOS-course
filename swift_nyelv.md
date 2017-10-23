@@ -40,7 +40,7 @@ var titleWithAuthor: String {
 
 `fileprivate`: .swift file-on belül látható
 
-`private`: csak a kódblokk-on belül látható vagy extenstio-ben
+`private`: csak a kódblokk-on belül látható vagy extension-ben
 
 ### Swift switch
 Kimerítőnek kell lennie (minden eshetőségre történnie kell valaminek, azaz legtöbb esetben default case is kell)
@@ -65,7 +65,6 @@ case let (x, y):
 ### Milyen módszereket ismersz opcionális típus kicsomagolására és használatára?
 ```swift
 let optionalString = String?
-// code here```
 
 guard let unWrappedString = optionalString else {
     return
@@ -76,8 +75,8 @@ if let unWrappedString = optionalString {
 }
 
 var name = optionalString? //ha optionalString nil, name is nil
-var otherName = optionalString! //ha optionalString nil, a program crash-el
+var otherName = optionalString! //ha optionalString nil, a program futásidőben crash-el
 ```
 
 ### Mi a kétfázisú inicializáció, és hogyan működik?
-Az osztály az `init()` függvényben először inicializálja a saját adattagjait, és csak utána az ősosztályét
+Az osztály az `init()` függvényben először inicializálja a saját adattagjait, és csak utána az ősosztályét a `super.init()`-el

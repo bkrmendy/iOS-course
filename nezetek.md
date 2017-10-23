@@ -30,7 +30,9 @@ UIPinchGestureRecognizer //pinch
 ![](img/load_view.png)
 
 Értesítések:
+Ha a View nem volt betöltve (ahogy a fenti képen is látszik), akkor a betöltődés fázisa után küld a controllernek egy `viewDidLoad`-ot, ami majd triggereli a `viewWillAppear`. [Kép](https://i.stack.imgur.com/eYCHy.jpg)
 ```swift
+func viewDidLoad()
 func viewWillAppear(_ animated: Bool)
 func viewDidAppear(_ animated: Bool)
 func viewWillDisappear(_ animated: Bool)
