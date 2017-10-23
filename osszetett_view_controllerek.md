@@ -9,7 +9,7 @@ Container View Controller: Más View Controllereket tárol
 Egy korábbi segue visszacsatolása; Interface Builder-ből
 
 ### Milyen különbségek vannak a XIB és a Storyboard között?
-*IB: egy view controller, SB: több View Controllert is tartalmazhat, egymással való viszonyaik definiálhatóak, table view cuccokat lehet állítgani benne
+*IB: egy view controller, SB: több View Controllert is tartalmazhat, egymással való viszonyaik definiálhatóak, table view cuccokat lehet állítgatni benne
 
 ### Tab Bar Controller property-jei
 * selectedViewController
@@ -18,8 +18,8 @@ Egy korábbi segue visszacsatolása; Interface Builder-ből
 * customizableVIewControllers
 
 ### Milyen elemekből áll a Navigation Bar? Hogy lehet ezeket beállítani?
-* vissza gomb
-* title
+* vissza gomb - `navigationBar.backItem`
+* title - `navigationBar.topItem.title` vagy `viewController.title`, ha be van ágyazva a ViewController NavigationControllerbe
 * opcionális jobb felső sarok gomb
 
 ### Milyen adaptív segue-ket ismersz?
@@ -44,11 +44,19 @@ guard let targetVC = segue.destination as? SomeViewController else {
 }
 ```
 ### Mire való a navigation controller?
-Verem-szerű navigációra (azaz csak lineáris tudok fel-le mozogni a hierarhiában)
+Verem-szerű navigációra (azaz csak lineárisan tudok fel-le mozogni a hierarhiában)
 
 ### Milyen megoldásokat ismersz View Controller megjelenítésére illetve visszalépésre Navigation Controller használata esetén?
-???
-
+Megjelenítés
+```swift
+navigationController.pushViewController(viewController: UIViewController>, animated: Bool)
+```
+Visszalépés
+``` swift
+navigationController.popViewController(animated: Bool) // egyet vissza a hierarchiaban
+navigationController.popToViewController(viewController: UIViewController, animated: Bool) // egy adott ViewControllerhez vissza
+navigationController.popToRootViewController(animated: Bool) // a roothoz vissza
+```
 ### Mit jelent a modális megjelenítés?
 Kb. felugró view controller, a jelenleg látható hierarchia fölé
 

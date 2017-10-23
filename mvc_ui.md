@@ -6,7 +6,7 @@
 A fordító elemzi a forráskódot és beilleszti a memóriakezeléssel kapcsolatos utasításokat (kb. `delete`)
 
 ### Mikor kell weak reference-et használni?
-Ha el akarjuk kerülni a körkörös referenciákat (pl Player-Weapon példa), és ha "a gyerek továbbélhet a szülő nélkül".
+Ha el akarjuk kerülni a körkörös referenciákat, azaz a memóriaszivárgást (pl Player-Weapon példa), és ha "a gyerek továbbélhet a szülő nélkül".
 
 A fordító nem veszi figyelembe a weak ref-et referenciaszámláláskor.
 
@@ -40,5 +40,4 @@ Pl: `@IBAction func buttonClick(sender: UIButton) {}`
 
 ### Milyen spec. követelmények vannak az MVC Modelljével szemben?
 Függetlennek kell lennie a View / ViewController logikájától.
-
-(???)
+Alapvetően a Model osztályok adatok tárolására használatosak. A Model nem tud sem a View, sem a Controller elemekről. A Controllerekben van tárolva referencia a Modelre és azt értesíti a magában bekövetkezett változásokról. *Kicsit csúnyán fogalmazva* [Kép](https://cdn-images-1.medium.com/max/800/1*PkWjDU0jqGJOB972cMsrnA.png)

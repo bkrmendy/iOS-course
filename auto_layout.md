@@ -1,6 +1,6 @@
 #  Auto Layout, Adaptive Layout stb.
 
-### Milyen külső/belső vátpzásokra kell reagálni az appoknak?
+### Milyen külső/belső vátozásokra kell reagálni az appoknak?
 Külső: pl. eszköz elforgatása, hívás, háttérbe helyezés
 
 Belső: Betűméret megváltozása, nyelv megváltozása
@@ -16,7 +16,7 @@ Content Hugging Priority: azon két kényszer prioritása, melyek azt rögzi
 ![](img/content_hugging.png)
 
 ### Milyen méretosztályba sorolható az iPhone X landscape tájolásban?
-_R_egular Width, _C_ompact Height
+Regular Width, Compact Height
 
 ### Mi az a Trait Collection?
 A készülék méret/tájolásspecifikus tulajdonságait tartalmazza
@@ -25,18 +25,18 @@ A készülék méret/tájolásspecifikus tulajdonságait tartalmazza
 * verticalSizeClass / horizontalSizeClass
 * User Interface Idiom (iPhone / iPad)
 * Display Scale (pixel/point)
-* egyéb (pl force touch capability)
+* egyéb (pl force touch capability)
 
 ### Mi az az Auto Layout?
 Az Auto Layout egy deklaratív módja a nézetek méretének és pozíciójának meghatározásának
 
 ### Mi az a kényszer, milyen elemei és tulajdonságai vannak?
-Egy kényszer két UI elem egymáshoz való elhelyezkedését adja meg  (pl `view.leading = 1.0xotherView.trailing + 10`)
+Egy kényszer két UI elem egymáshoz való elhelyezkedését adja meg  (pl `view.leading = anotherView.trailing + 10`)
 
-### Milyen lehetőség van kódból létrehozni kényszert?
-* `NSLayoutAnchor`: legjobb módszer, rendelkezik type checking-gel
-* `NSLayoutConstraint`: csak runtime alatt derülnek ki a hibák
-* Visual Format Language: pl `[view]-50.0-[otherView]`; sok a hibalehetőség
+### Milyen lehetőség van kódból létrehozni kényszert? 
+* `NSLayoutAnchor`: legjobb módszer, rendelkezik type checking-gel
+* `NSLayoutConstraint`: csak runtime alatt derülnek ki a hibák
+*  Visual Format Language: pl `[view]-50.0-[otherView]`; sok a hibalehetőség
 
 ### Mi az Adaptive Layout? Milyen problémát old meg?
 Az Adaptive Layout-tal különböző orientációjú és méretosztályú lévő eszközökre tudunk UI-t fejleszteni
@@ -46,7 +46,7 @@ Size class & orientáció alapján
 
 ### Hozz létre egy Alert Controllert kódból tetszőleges szöveggel, egy beviteli mezővel és egy gombbal. Írd ki a beviteli mező (Text Field) tartalmát a gomb megnyomásakor a konzolra!
 ```swift
-let alertController = UIAlertController(title: ”Title", message: ”Message", preferredStyle: .alert)
+let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
 alertController.addTextField { textField in
     textField.placeholder = "Input"
 }
@@ -55,6 +55,5 @@ let okAction = UIAlertAction(title: "OK", style: .default, handler: {
 })
 alertController.addAction(okAction)
 present(alertController, animated: true, completion: nil)
-
 ```
 
