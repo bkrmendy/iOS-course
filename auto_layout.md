@@ -10,10 +10,10 @@ A Safe Area a UIView-n belüli használható régiót határolja, a Top/Bottom/L
 
 ### Egy intrinsic content size-zal rendelkező nézetnél mit takar a Content Compression Resistance és a Content Hugging Priority? (1-1 mondat + egyszerű ábra)
 Content Compression Resistance Priority: azon két kényszer prioritása, melyek rögzítik, hogy a nézet nem lehet kisebb mint az intrinsic content size
-![](img/content_compression)
+![](img/content_compression.png)
 
 Content Hugging Priority: azon két kényszer prioritása, melyek azt rögzítik, hogy a nézet nem lehet nagyobb mint az intrinsic content size
-![](img/content_hugging)
+![](img/content_hugging.png)
 
 ### Milyen méretosztályba sorolható az iPhone X landscape tájolásban?
 _R_egular Width, _C_ompact Height
